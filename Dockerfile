@@ -1,11 +1,11 @@
 # Imagen base ligera de Nginx
+# Imagen base ligera con Nginx (servidor web)
 FROM nginx:alpine
 
-# Copiamos el archivo HTML a la carpeta pública de Nginx
-COPY Pagina\ Loto\ Estelar.html /usr/share/nginx/html/index.html
+# Copiar todos los archivos del proyecto al directorio público de Nginx
+COPY . /usr/share/nginx/html
 
-# Exponemos el puerto 80
+# Exponer el puerto 80 para el tráfico HTTP
 EXPOSE 80
 
-# Inicia Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# El contenedor iniciará automáticamente Nginx
