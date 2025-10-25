@@ -1,4 +1,3 @@
-# Imagen base ligera de Nginx
 # Imagen base ligera con Nginx (servidor web)
 FROM nginx:alpine
 
@@ -9,3 +8,4 @@ COPY . /usr/share/nginx/html
 EXPOSE 80
 
 # El contenedor iniciará automáticamente Nginx
+CMD ["nginx", "-g", "daemon off;"]
