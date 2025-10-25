@@ -1,8 +1,8 @@
 # Imagen base ligera con Nginx (servidor web)
 FROM nginx:alpine
 
-# Copiar todos los archivos del proyecto al directorio público de Nginx
-COPY . /usr/share/nginx/html
+# Copiar tu archivo y renombrarlo a index.html
+COPY "Pagina-Loto-Estelar.html" /usr/share/nginx/html/index.html
 
 # Exponer el puerto 80 para el tráfico HTTP
 EXPOSE 80
